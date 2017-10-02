@@ -21,7 +21,7 @@ class ToDoTableViewController: UITableViewController, NSFetchedResultsController
     //Xiong yang
     var table : MSSyncTable?
     var store : MSCoreDataStore?
-    
+    //shengcong
     lazy var fetchedResultController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "TodoItem")
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext!
