@@ -141,12 +141,82 @@
                     <view key="view" contentMode="scaleToFill" id="6mb-d3-jyC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uom-RM-uy1">
+                                <rect key="frame" x="151.5" y="67" width="71" height="36"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uom-RM-uy1" firstAttribute="top" secondItem="X1L-7L-TKs" secondAttribute="bottom" constant="47" id="fO8-Mg-tQ3"/>
+                            <constraint firstItem="uom-RM-uy1" firstAttribute="centerX" secondItem="6mb-d3-jyC" secondAttribute="centerX" id="lb1-9X-Vgv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label1" destination="X3y-Nl-16y" id="cFW-Tf-RxS"/>
+                        <outlet property="label2" destination="qqb-iR-8oi" id="G95-UK-diZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9l-Ct-8zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1381" y="957"/>
+            <point key="canvasLocation" x="1380" y="956.67166416791611"/>
+        </scene>
+        <!--Set Emergency Message View Controller-->
+        <scene sceneID="Sgm-wG-7m8">
+            <objects>
+                <viewController id="U3q-AK-Cl8" customClass="SetEmergencyMessageViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eED-Me-0fT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ff1-gu-Mp4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i4e-iW-O3n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jVF-Yy-1Vo">
+                                <rect key="frame" x="111" y="83" width="152" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3y-Nl-16y">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqb-iR-8oi">
+                                        <rect key="frame" x="81" y="0.0" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Input Emergency Message here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-eK-kkl">
+                                <rect key="frame" x="67" y="224" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="etu-oo-Y0X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ff1-gu-Mp4" firstAttribute="top" secondItem="CYp-eK-kkl" secondAttribute="bottom" constant="315" id="Js0-Ba-jrN"/>
+                            <constraint firstItem="jVF-Yy-1Vo" firstAttribute="centerX" secondItem="i4e-iW-O3n" secondAttribute="centerX" id="S6w-nA-kXN"/>
+                            <constraint firstItem="jVF-Yy-1Vo" firstAttribute="top" secondItem="eED-Me-0fT" secondAttribute="bottom" constant="63" id="XDY-0J-ruy"/>
+                            <constraint firstItem="CYp-eK-kkl" firstAttribute="leading" secondItem="i4e-iW-O3n" secondAttribute="leadingMargin" constant="51" id="ifV-sR-2P6"/>
+                            <constraint firstItem="CYp-eK-kkl" firstAttribute="centerX" secondItem="jVF-Yy-1Vo" secondAttribute="centerX" id="oyx-rN-QCI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="X3y-Nl-16y" id="brS-L2-98z"/>
+                        <outlet property="label2" destination="qqb-iR-8oi" id="qe3-qk-pyW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhs-4Z-iwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="962"/>
         </scene>
     </scenes>
 </document>
