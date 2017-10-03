@@ -121,6 +121,7 @@ class ToDoTableViewController: UITableViewController, NSFetchedResultsController
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
+        //Update item
         let record = self.fetchedResultController.object(at: indexPath) as! NSManagedObject
         var item = self.store!.tableItem(from: record)
         item["complete"] = true
@@ -154,6 +155,8 @@ class ToDoTableViewController: UITableViewController, NSFetchedResultsController
         return cell
     }
     
+    
+    //Get the text from azure database
     func configureCell(_ cell: UITableViewCell, indexPath: IndexPath) -> UITableViewCell {
         let item = self.fetchedResultController.object(at: indexPath) as! NSManagedObject
         
@@ -189,7 +192,7 @@ class ToDoTableViewController: UITableViewController, NSFetchedResultsController
     
     // MARK: - ToDoItemDelegate
     
-    
+    //Insert the item into database
     func didSaveItem(_ text: String)
     {
         if text.isEmpty {
@@ -200,6 +203,7 @@ class ToDoTableViewController: UITableViewController, NSFetchedResultsController
         let itemToInsert = ["text": text, "complete": false, "__createdAt": Date()] as [String : Any]
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         self.table!.insert(itemToInsert) {
             (item, error) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false

@@ -11,8 +11,9 @@ import CoreLocation
 
 class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDelegate {
     
-    @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var latitudelabel: UILabel!
+    @IBOutlet weak var longitudelabel: UILabel!
+    @IBOutlet weak var emessage: UITextView!
     
     let locationManager = CLLocationManager()
     
@@ -23,8 +24,6 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         locationManager.distanceFilter = 10
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,9 +32,20 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation : CLLocation = locations.last!
-        print("\(currentLocation.coordinate.latitude)")
-        label1.text = "\(currentLocation.coordinate.latitude)"
-        label2.text = "\(currentLocation.coordinate.longitude)"
+        latitudelabel.text = "\(currentLocation.coordinate.latitude)"
+        longitudelabel.text = "\(currentLocation.coordinate.longitude)"
+    }
+    
+    
+    @IBAction func Save(_ sender: UIButton) {
+        let em = EmergencyMessage()
+        print(latitudelabel.text!)
+        print(longitudelabel.text!)
+        em.latitude = latitudelabel.text!
+        em.longitude = longitudelabel.text!
+        em.emergencyMessage = emessage.text!
+        em.saveItem()
+        
     }
     
     
