@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class EmergencyMessage{
 var latitude = "0"
@@ -16,6 +17,8 @@ var longitude = "0"
 var location = "location description"
 
 var emergencyMessage = "This is the Emergency Message"
+    
+var address = "This is the address detail"
 
 init() {
         
@@ -27,7 +30,7 @@ func saveItem(){
     
     let itemTable:MSTable = client.table(withName: "emergencymsg")
     
-    let itemToInsert = ["latitude":latitude, "longitude":longitude, "emergencymessage":emergencyMessage] as [String : Any]
+    let itemToInsert = ["latitude":latitude, "longitude":longitude, "emergencymessage":emergencyMessage, "address":address] as [String : Any]
     
     itemTable.insert(itemToInsert) {
         (item, error) in
@@ -37,5 +40,6 @@ func saveItem(){
         }
     }
 }
+    
     
 }
