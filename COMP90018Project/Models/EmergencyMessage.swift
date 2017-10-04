@@ -20,6 +20,9 @@ var emergencyMessage = "This is the Emergency Message"
     
 var address = "This is the address detail"
 
+//var table : MSSyncTable?
+//var store : MSCoreDataStore?
+    
 init() {
         
     }

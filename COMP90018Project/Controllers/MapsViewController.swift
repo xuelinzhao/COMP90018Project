@@ -19,10 +19,11 @@ import GoogleMaps
         
         let em = EmergencyMessage()
         
+        
         override func viewDidLoad() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = 10
+            locationManager.distanceFilter = 5
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
             print("Start Loaction")
@@ -37,7 +38,7 @@ import GoogleMaps
             lock.unlock()
             
             //Show Google Map View
-            let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 12)
+            let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 20)
             let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
             mapView.isMyLocationEnabled = true
             view = mapView
