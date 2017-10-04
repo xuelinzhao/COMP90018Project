@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="1359.375" y="168.75"/>
         </scene>
-        <!--View Controller-->
+        <!--My View Controller-->
         <scene sceneID="dD5-JD-aoQ">
             <objects>
-                <viewController id="r4c-FZ-6O4" sceneMemberID="viewController">
+                <viewController id="r4c-FZ-6O4" customClass="MyViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRC-Gc-LcY"/>
                         <viewControllerLayoutGuide type="bottom" id="TIq-Ry-yqL"/>
@@ -142,24 +142,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-Zs-jCi">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-Zs-jCi">
                                 <rect key="frame" x="0.0" y="656" width="207" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="SOS">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sosPressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="W0W-xr-CU9"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-3q-fD0">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-3q-fD0">
                                 <rect key="frame" x="207" y="656" width="207" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Tools">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Tools"/>
                                 <connections>
                                     <segue destination="260-kc-Tzc" kind="show" id="2fU-Vo-1Eg"/>
                                 </connections>
@@ -167,15 +165,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonSOS" destination="6Px-Zs-jCi" id="6xQ-2z-EQC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GB-gU-owr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1365.217391304348" y="891.84782608695662"/>
         </scene>
-        <!--View Controller-->
+        <!--Tools View Controller-->
         <scene sceneID="JPi-Ui-i8F">
             <objects>
-                <viewController id="260-kc-Tzc" sceneMemberID="viewController">
+                <viewController id="260-kc-Tzc" customClass="ToolsViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Szr-sF-obj"/>
                         <viewControllerLayoutGuide type="bottom" id="BOL-Fq-EeQ"/>
@@ -189,12 +190,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="r4c-FZ-6O4" kind="show" id="fyC-CJ-SZN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-6S-ClW">
                                 <rect key="frame" x="0.0" y="199" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Dummy Call"/>
+                                <connections>
+                                    <action selector="dummyCallPressed:" destination="260-kc-Tzc" eventType="touchDragInside" id="WFz-EY-suh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-uX-2fa">
                                 <rect key="frame" x="0.0" y="303" width="414" height="80"/>
@@ -207,10 +214,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Torch"/>
+                                <connections>
+                                    <action selector="torchPressed:" destination="260-kc-Tzc" eventType="touchUpInside" id="UQi-tv-jC4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dummyCallButton" destination="Lc6-6S-ClW" id="YgQ-Rs-sFu"/>
+                        <outlet property="torchButton" destination="CAT-pQ-O5G" id="WPz-fC-jGS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-5x-pwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
