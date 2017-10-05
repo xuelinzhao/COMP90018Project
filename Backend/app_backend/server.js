@@ -51,9 +51,9 @@ apiRoutes.post('/sendEmail', function(req, res){
 
   	var mailOptions = {
   		from: '91safecare@gmail.com',
-  		to: 'xiong1@student.unimelb.edu.au',
+  		to: contact,
   		subject: 'Sending Email using Node.js',
-  		text: 'testing'
+  		text: message
 	};
 
 
