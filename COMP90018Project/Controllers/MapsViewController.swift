@@ -133,8 +133,9 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     @IBOutlet weak var TimerLabel: UILabel!
     
     @IBAction func CountButton(_ sender: UIButton) {
-        //get left time
+       
         stopFlag = false
+        //get left time
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(tickDown), userInfo: nil, repeats: true)
     }
     
@@ -146,8 +147,9 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     
     var stopFlag = false
     
+    //Pop into password confirm view
     @IBAction func StopButton(_ sender: UIButton) {
-        stopFlag = true
+        //stopFlag = true
     }
     
     @objc func tickDown() {
@@ -157,13 +159,8 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         //update left time
         let timeCount = getTimeCount(leftTimeCount: leftTime)
         TimerLabel.text = timeCount
-        //if lefte time <= 0
-        if stopFlag {
-            timer.invalidate()
-            TimerLabel.text = "Stop"
-        }
-        
-        if leftTime <= 0 {
+        //if lefte time <= 0 or stop confirmed
+        if leftTime <= 0 || stopFlag {
             //delete timer
             timer.invalidate()
             TimerLabel.text = "Time up"
