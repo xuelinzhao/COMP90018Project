@@ -15,17 +15,26 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     @IBOutlet weak var longitudelabel: UILabel!
     @IBOutlet weak var emessage: UITextView!
     
-    let locationManager = CLLocationManager()
+    //Location
+    var locationManager = CLLocationManager()
     let em = EmergencyMessage()
     var address = "This is the address"
     
+   
+    //Timer
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
+        locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 5
         locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 5
         locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        print("Start Loaction")
         
     }
     
