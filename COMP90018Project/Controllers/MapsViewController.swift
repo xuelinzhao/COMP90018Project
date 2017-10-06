@@ -9,7 +9,12 @@
 import UIKit
 import GoogleMaps
 
-class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerViewDelegate, UIPickerViewDataSource {
+class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerViewDelegate, UIPickerViewDataSource, ParameterDelegate{
+    
+    func passParams(tmpStr: Bool){
+        stopFlag = tmpStr
+        print(stopFlag)
+    }
     
     // You don't need to modify the default init(nibName:bundle:) method.
     
@@ -22,6 +27,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     var zoomLevel: Float = 20.0
     
     let em = EmergencyMessage()
+    
     
     override func viewDidLoad() {
         
@@ -127,7 +133,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     }
     
     //Timer Section
-    var leftTime:Int = 5
+    var leftTime:Int = 10
     var timer :Timer!
     
     @IBOutlet weak var TimerLabel: UILabel!
@@ -149,26 +155,29 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     
     //Pop into password confirm view
     @IBAction func StopButton(_ sender: UIButton) {
-        //stopFlag = true
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "confirmstop") as! ConfirmStopViewController
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func tickDown() {
         //minus 1 second
         leftTime -= 1
         print(leftTime)
+        print(stopFlag)
         //update left time
         let timeCount = getTimeCount(leftTimeCount: leftTime)
         TimerLabel.text = timeCount
         //if lefte time <= 0 or stop confirmed
-        if leftTime <= 0 || stopFlag {
+        if ((leftTime <= 0)||stopFlag) {
             //delete timer
             timer.invalidate()
             TimerLabel.text = "Time up"
             let alter = UIAlertView()
-//            alter.title = "Time up"
-//            alter.message = "Time up"
-//            alter.addButton(withTitle: "Confirm")
-//            alter.show()
+            alter.title = "Time up"
+            alter.message = "Time up"
+            alter.addButton(withTitle: "Confirm")
+            alter.show()
         }
     }
     

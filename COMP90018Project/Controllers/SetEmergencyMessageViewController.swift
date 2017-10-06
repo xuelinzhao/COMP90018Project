@@ -18,13 +18,10 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     //Location
     var locationManager = CLLocationManager()
     let em = EmergencyMessage()
+   
     var address = "This is the address"
     
-   
     //Timer
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

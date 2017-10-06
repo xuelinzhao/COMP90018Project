@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+class ConfirmPassword{
+    
+    var user: String = "username"
+    var password: String = "password"
+    var phone: String = "phonenumber"
+    var emergencyPhone = "energeneyPhone"
+    var emergencyEmail = "emergencyEmail;"
+    
+    init() {
+        
+    }
+    
+    func checkStopPIN(PIN:String)->Bool{
+        if PIN == "1111"{
+            return true
+        }else{
+            return false
+        }
+        }
+}
