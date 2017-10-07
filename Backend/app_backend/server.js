@@ -2,12 +2,12 @@
 var express = require('express');
 app = express();
 
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
-var passport = require('passport');
-var jwt = require('jsonwebtoken');
+//var passport = require('passport');
+//var jwt = require('jsonwebtoken');
 
 var nodemailer = require('nodemailer');
 
@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 // Initialize passport  
-app.use(passport.initialize());
+//app.use(passport.initialize());
 
 // connect to database
 // mongoose.connect(config.database);
