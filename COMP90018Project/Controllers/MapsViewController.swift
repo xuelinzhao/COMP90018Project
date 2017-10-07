@@ -164,7 +164,6 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         //minus 1 second
         leftTime -= 1
         print(leftTime)
-        print(stopFlag)
         //update left time
         let timeCount = getTimeCount(leftTimeCount: leftTime)
         TimerLabel.text = timeCount

@@ -18,22 +18,34 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var emphone: UITextField!
     @IBOutlet weak var ememail: UITextField!
-
-//   var usernameContent = self.username.text!
-//  var passwordContent = self.password.text!
-//    var emailContent = self.email.text!
-//    var phoneContent = self.phone.text!
-//    var ememailContent = self.ememail.text!
-//    var emphoneContent = self.emphone.text!
     
     var user1 = User()
     var user = User()
+    let CP = ConfirmPassword()
+    var stopFlag = true
     
     @IBAction func RegisterNextButton(_ sender: UIButton) {
+        
         user1.username = self.username.text!
+
+        if(self.password.text == self.confirmpassword.text){
         user1.password = self.password.text!
+            stopFlag = true
+        }else{
+            stopFlag = false
+            let alter = UIAlertView()
+            alter.title = "Info Incorrect"
+            alter.message = "The passwords are not the same! "
+            alter.addButton(withTitle: "ok")
+            alter.show()
+        }
         user1.email = self.email.text!
         user1.phone = self.phone.text!
+        let ec = self.storyboard?.instantiateViewController(withIdentifier: "ECVC") as! RegisterViewController
+        if stopFlag {
+           ec.user = user1
+    self.navigationController?.pushViewController(ec, animated: true)
+        }
     }
     
     @IBAction func Register(_ sender: UIButton) {
@@ -42,15 +54,11 @@ class RegisterViewController: UIViewController {
         user.saveUser()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let ec = segue.destination as! RegisterViewController
-        ec.user = user1
-    }
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {

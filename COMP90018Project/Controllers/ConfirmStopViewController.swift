@@ -27,16 +27,7 @@ class ConfirmStopViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let vews: [UIViewController] = (self.navigationController?.viewControllers)!
-//        
-//        if  vews.count > 0 {
-//            
-//            for vew in vews{
-//                print( type(of: vew))
-//            }
-//            
-//        }
-        // Do any additional setup after loading the view.
+
     }
     
     @IBAction func TouchDigit(_ sender: UIButton) {
@@ -63,7 +54,7 @@ class ConfirmStopViewController: UIViewController  {
         }
     }
   
-    
+    //Confirm stopPIN
     @IBAction func ConfirmPIN(_ sender: UIButton) {
         stopFlag = cp.checkStopPIN(PIN: StopPIN)
         if stopFlag{
@@ -85,10 +76,27 @@ class ConfirmStopViewController: UIViewController  {
         }
     }
     
-//    override func  prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let MapsView = segue.destination as! MapsViewController
-//        MapsView.stopFlag = false
-//    }
+    //Backspace
+    @IBAction func DeleteButton(_ sender: UIButton) {
+        if PassFour.text == "_"{
+            if PassThree.text == "_"{
+                if PassTwo.text == "_"{
+                    if PassOne.text == "_"{
+                        
+                    }else{
+                        PassOne.text = "_"
+                    }
+                }else{
+                    PassTwo.text = "_"
+                }
+            }else{
+                PassThree.text = "_"
+            }
+        }else{
+            PassFour.text = "_"
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
