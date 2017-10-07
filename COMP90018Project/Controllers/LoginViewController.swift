@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        password.isSecureTextEntry = true
         CP.getResults()
         // Do any additional setup after loading the view.
         table = client.table(withName: "user")
@@ -44,7 +45,7 @@ class LoginViewController: UIViewController {
         //    usernameExist = CP.checkUserExisting(inputUsername: username.text!)
         //    passwordCorrect = CP.checkPassword(inputPassword: password.text!)
         // Create a predicate that finds items where complete is false
-        var sqlQuery = "username == "+"\'"+username.text!+"\'"
+        let sqlQuery = "username == "+"\'"+username.text!+"\'"
         print(sqlQuery)
         let predicate =  NSPredicate(format: sqlQuery)
         // Query the TodoItem table
@@ -59,8 +60,7 @@ class LoginViewController: UIViewController {
                             self.user.username = self.username.text!
                             print("All Correct!!!!!!!")
                             Global.init(inputuser: self.user)
-//                            let mainNC = self.storyboard?.instantiateViewController(withIdentifier: "mainNC")
-//                            self.navigationController?.pushViewController(mainNC!, animated: true)
+                      //segue to the main view
                         self.performSegue(withIdentifier: "login", sender: self)
                         }
                         else{

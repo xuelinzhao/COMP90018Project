@@ -24,6 +24,12 @@ class RegisterViewController: UIViewController {
     let CP = ConfirmPassword()
     var stopFlag = true
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        password?.isSecureTextEntry = true
+        confirmpassword?.isSecureTextEntry = true
+    }
+    
     @IBAction func RegisterNextButton(_ sender: UIButton) {
         
         user1.username = self.username.text!
@@ -56,10 +62,7 @@ class RegisterViewController: UIViewController {
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
