@@ -10,40 +10,55 @@ import UIKit
 import Iconic
 //import SwiftIconFont
 
-class MyViewController: UIViewController {
+class MainViewController: UIViewController {
     
-    @IBOutlet weak var sosButton: UIButton!
-    @IBOutlet weak var toolsButton: UIButton!
-    @IBOutlet weak var guardMeButton: UIButton!
+
+    @IBOutlet weak var topLeftButton: UIButton!
+    @IBOutlet weak var topRightButton: UIButton!
+    
     
     @IBOutlet weak var stateButton1: UIButton!
     @IBOutlet weak var stateButton2: UIButton!
     @IBOutlet weak var stateButton3: UIButton!
     @IBOutlet weak var stateButton4: UIButton!
     
+    @IBOutlet weak var guardMeButton: UIButton!
+    
+    @IBOutlet weak var sosButton: UIButton!
+    @IBOutlet weak var toolsButton: UIButton!
+
+    
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // User Button
+        topLeftButton.setIconImage(withIcon: .thListIcon, size: CGSize(width: 30, height: 30), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        topLeftButton.setIconImage(withIcon: .sunIcon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.234, blue: 0.5, alpha: 1), forState: .highlighted)
+        
         // SOS Button
-        self.sosButton.layer.cornerRadius = 20
-        self.sosButton.clipsToBounds = true
-        self.sosButton.setBackgroundColor(color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .normal)
-        self.sosButton.setBackgroundColor(color: UIColor(red: 1, green: 0.575, blue: 0.5, alpha: 1), forState: .highlighted)
+        sosButton.layer.cornerRadius = 20
+        sosButton.clipsToBounds = true
+        sosButton.setBackgroundColor(color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .normal)
+        sosButton.setBackgroundColor(color: UIColor(red: 1, green: 0.575, blue: 0.5, alpha: 1), forState: .highlighted)
     
         
         // Tools Button
-        self.toolsButton.layer.cornerRadius = 20
-        self.toolsButton.clipsToBounds = true
-        self.toolsButton.setBackgroundColor(color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        self.toolsButton.setBackgroundColor(color: UIColor(red: 0.5, green: 0.76, blue: 1, alpha: 1), forState: .highlighted)
+        toolsButton.layer.cornerRadius = 20
+        toolsButton.clipsToBounds = true
+        toolsButton.setBackgroundColor(color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        toolsButton.setBackgroundColor(color: UIColor(red: 0.5, green: 0.76, blue: 1, alpha: 1), forState: .highlighted)
         
         // Guard Me Button
-        self.guardMeButton.layer.cornerRadius = 20
-        self.guardMeButton.clipsToBounds = true
-        self.guardMeButton.setBackgroundColor(color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        self.guardMeButton.setBackgroundColor(color: UIColor(red: 0.5, green: 0.76, blue: 1, alpha: 1), forState: .highlighted)
-        self.guardMeButton.setTitleColor(UIColor(white:1, alpha: 1), for: .normal)
+        guardMeButton.layer.cornerRadius = 20
+        guardMeButton.clipsToBounds = true
+        guardMeButton.setBackgroundColor(color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        guardMeButton.setBackgroundColor(color: UIColor(red: 0.5, green: 0.76, blue: 1, alpha: 1), forState: .highlighted)
+        
+        stateButton1.setIconImage(withIcon: ._625Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        guardMeButton.setTitleColor(UIColor(white:1, alpha: 1), for: .normal)
         
         //        iconButton.parseIcon()
         stateButton1.setIconImage(withIcon: .sunIcon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
@@ -55,8 +70,8 @@ class MyViewController: UIViewController {
         stateButton1.layer.cornerRadius = 10
         stateButton1.clipsToBounds = true
        
-        stateButton2.setIconImage(withIcon: ._279Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        stateButton2.setIconImage(withIcon: ._279Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        stateButton2.setIconImage(withIcon: .homeIcon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        stateButton2.setIconImage(withIcon: .homeIcon, size: CGSize(width: 60, height: 60), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
         
         stateButton2.setTitleColor(UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), for: .normal)
         stateButton2.setTitleColor(UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), for: .selected)
@@ -99,48 +114,43 @@ class MyViewController: UIViewController {
     }
     */
     
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        commonInit()
-//    }
+
     
-//    func commonInit() -> Void {
-//
-//        let tabItem = UITabBarItem(withIcon: .pictureIcon, size: CGSize(width: 20, height: 20), title: "As Image")
-//
-//        self.title = tabItem.title
-//        self.tabBarItem = tabItem
-//
-//        let buttonItem = UIBarButtonItem(withIcon: .cogIcon, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
-//        self.navigationItem.rightBarButtonItem = buttonItem
-//    }
-//
-//    @objc func didTapRightItem() {
-//        // Do something
-//    }
+    // MARK: Button
     
+    @IBAction func btnGuardMePressed(_ sender: UIButton) {
+        
+        // lead to map and time picker
+        
+        
+    }
     
     @IBAction func btnSOSPressed(_ sender: UIButton) {
+        // lead to contact table scene
     }
     
     
     @IBAction func button1Pressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected;
+        // state 1
     }
     
     
     @IBAction func button2Pressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected;
+        // state 2
     }
     
     
     @IBAction func button3Pressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected;
+        // state 3
     }
     
     
     @IBAction func button4Pressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected;
+        // state 4
     }
 }
 

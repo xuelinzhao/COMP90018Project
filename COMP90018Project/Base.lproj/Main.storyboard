@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1359.375" y="168.75"/>
         </scene>
-        <!--My View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="dD5-JD-aoQ">
             <objects>
-                <viewController id="r4c-FZ-6O4" customClass="MyViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r4c-FZ-6O4" customClass="MainViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRC-Gc-LcY"/>
                         <viewControllerLayoutGuide type="bottom" id="TIq-Ry-yqL"/>
@@ -158,6 +158,9 @@
                                 <state key="normal" title="    Guard Me    "/>
                                 <state key="selected" title="Guarded"/>
                                 <state key="highlighted" title="You are being guarded."/>
+                                <connections>
+                                    <action selector="btnGuardMePressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="ql2-FB-gOe"/>
+                                </connections>
                             </button>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOW-uE-jcu">
                                 <rect key="frame" x="0.0" y="573.5" width="375" height="93.5"/>
@@ -200,11 +203,10 @@
                                 <rect key="frame" x="20" y="108.5" width="335" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnS-5U-uFh" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="41.5" y="42" width="85" height="41"/>
+                                        <rect key="frame" x="24.5" y="42" width="119" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Button1">
+                                        <state key="normal" title=" Taking Taxi">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" title=" Button1">
                                             <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -214,12 +216,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA1-c3-4kp" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="207.5" y="42" width="88" height="41"/>
+                                        <rect key="frame" x="183.5" y="42" width="136" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Button2"/>
-                                        <state key="selected" title="Button2">
-                                            <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <state key="normal" title=" Going Home"/>
+                                        <state key="selected" title="Button2"/>
                                         <connections>
                                             <action selector="button2Pressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="UNp-cR-4Jl"/>
                                         </connections>
@@ -248,27 +248,37 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="xnS-5U-uFh" firstAttribute="centerY" secondItem="QYc-4i-gAc" secondAttribute="centerY" multiplier="0.5" id="BAk-4t-KjS"/>
-                                    <constraint firstItem="k5u-98-SMd" firstAttribute="centerY" secondItem="QYc-4i-gAc" secondAttribute="centerY" multiplier="1.5" id="IJJ-hQ-lh9"/>
-                                    <constraint firstItem="k5u-98-SMd" firstAttribute="centerX" secondItem="QYc-4i-gAc" secondAttribute="centerX" multiplier="1.5" id="KU3-3D-Gkg"/>
-                                    <constraint firstItem="PA1-c3-4kp" firstAttribute="centerY" secondItem="xnS-5U-uFh" secondAttribute="centerY" id="LmB-pO-lfY"/>
-                                    <constraint firstItem="4r9-RT-fYL" firstAttribute="centerY" secondItem="k5u-98-SMd" secondAttribute="centerY" id="QxN-XG-JKP"/>
-                                    <constraint firstItem="xnS-5U-uFh" firstAttribute="centerX" secondItem="QYc-4i-gAc" secondAttribute="centerX" multiplier="0.5" id="ZkY-MH-SId"/>
-                                    <constraint firstItem="PA1-c3-4kp" firstAttribute="centerX" secondItem="k5u-98-SMd" secondAttribute="centerX" id="ZvR-7W-zhd"/>
-                                    <constraint firstItem="4r9-RT-fYL" firstAttribute="centerX" secondItem="xnS-5U-uFh" secondAttribute="centerX" id="uM5-K7-dlT"/>
+                                    <constraint firstItem="PA1-c3-4kp" firstAttribute="centerY" secondItem="xnS-5U-uFh" secondAttribute="centerY" id="ABJ-yd-lMj"/>
+                                    <constraint firstItem="xnS-5U-uFh" firstAttribute="centerX" secondItem="QYc-4i-gAc" secondAttribute="centerX" multiplier="0.5" id="Gnx-7r-9O3"/>
+                                    <constraint firstItem="PA1-c3-4kp" firstAttribute="centerX" secondItem="k5u-98-SMd" secondAttribute="centerX" id="V3K-m2-PMa"/>
+                                    <constraint firstItem="k5u-98-SMd" firstAttribute="centerY" secondItem="QYc-4i-gAc" secondAttribute="centerY" multiplier="1.5" id="XI2-qq-Cko"/>
+                                    <constraint firstItem="4r9-RT-fYL" firstAttribute="centerX" secondItem="xnS-5U-uFh" secondAttribute="centerX" id="ZMw-Pu-J2k"/>
+                                    <constraint firstItem="k5u-98-SMd" firstAttribute="centerX" secondItem="QYc-4i-gAc" secondAttribute="centerX" multiplier="1.5" id="bMI-Ge-wTj"/>
+                                    <constraint firstItem="4r9-RT-fYL" firstAttribute="centerY" secondItem="k5u-98-SMd" secondAttribute="centerY" id="cv4-Ps-UPD"/>
+                                    <constraint firstItem="xnS-5U-uFh" firstAttribute="centerY" secondItem="QYc-4i-gAc" secondAttribute="centerY" multiplier="0.5" id="fN5-mZ-zPx"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqg-wJ-XL2">
+                                <rect key="frame" x="329" y="20" width="30" height="30"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t7-Qu-4tx">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QYc-4i-gAc" firstAttribute="leading" secondItem="93N-WE-7La" secondAttribute="leading" constant="20" id="F94-hR-tE8"/>
+                            <constraint firstItem="kqg-wJ-XL2" firstAttribute="trailing" secondItem="93N-WE-7La" secondAttribute="trailingMargin" id="0Ou-5C-HbP"/>
+                            <constraint firstItem="0t7-Qu-4tx" firstAttribute="leading" secondItem="93N-WE-7La" secondAttribute="leadingMargin" id="6wP-gf-389"/>
+                            <constraint firstItem="QYc-4i-gAc" firstAttribute="centerY" secondItem="93N-WE-7La" secondAttribute="centerY" multiplier="0.7" id="B5y-mI-WN5"/>
                             <constraint firstItem="TIq-Ry-yqL" firstAttribute="top" secondItem="mOW-uE-jcu" secondAttribute="bottom" id="Grc-il-n5H"/>
-                            <constraint firstItem="QYc-4i-gAc" firstAttribute="centerY" secondItem="93N-WE-7La" secondAttribute="centerY" multiplier="0.7" id="OPg-fA-zlG"/>
-                            <constraint firstAttribute="trailing" secondItem="QYc-4i-gAc" secondAttribute="trailing" constant="20" id="S4p-AU-kxC"/>
+                            <constraint firstItem="QYc-4i-gAc" firstAttribute="leading" secondItem="93N-WE-7La" secondAttribute="leadingMargin" constant="4" id="HJ5-HM-Y4b"/>
+                            <constraint firstItem="kqg-wJ-XL2" firstAttribute="top" secondItem="pRC-Gc-LcY" secondAttribute="bottom" id="I54-wH-YeE"/>
+                            <constraint firstItem="QYc-4i-gAc" firstAttribute="height" secondItem="93N-WE-7La" secondAttribute="height" multiplier="250:667" id="M6Y-Mj-CmC"/>
                             <constraint firstAttribute="trailing" secondItem="mOW-uE-jcu" secondAttribute="trailing" id="SIf-ks-xdE"/>
+                            <constraint firstItem="0t7-Qu-4tx" firstAttribute="top" secondItem="pRC-Gc-LcY" secondAttribute="bottom" id="We9-qa-MKz"/>
                             <constraint firstItem="kKD-TZ-rNd" firstAttribute="centerX" secondItem="93N-WE-7La" secondAttribute="centerX" id="YNQ-qA-bci"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QYc-4i-gAc" secondAttribute="trailing" constant="4" id="c7k-hS-whz"/>
                             <constraint firstItem="mOW-uE-jcu" firstAttribute="leading" secondItem="93N-WE-7La" secondAttribute="leading" id="hEF-si-HMR"/>
-                            <constraint firstItem="QYc-4i-gAc" firstAttribute="height" secondItem="93N-WE-7La" secondAttribute="height" multiplier="250:667" id="i3Z-8h-xta"/>
                             <constraint firstItem="mOW-uE-jcu" firstAttribute="top" secondItem="kKD-TZ-rNd" secondAttribute="bottom" constant="15" id="tgK-d7-D0z"/>
                             <constraint firstItem="mOW-uE-jcu" firstAttribute="height" secondItem="93N-WE-7La" secondAttribute="height" multiplier="0.14" id="zBH-9u-P89"/>
                         </constraints>
@@ -281,6 +291,8 @@
                         <outlet property="stateButton3" destination="4r9-RT-fYL" id="h6K-Zu-ymC"/>
                         <outlet property="stateButton4" destination="k5u-98-SMd" id="lYL-0r-Uwf"/>
                         <outlet property="toolsButton" destination="gBE-3q-fD0" id="AHA-gG-gJp"/>
+                        <outlet property="topLeftButton" destination="0t7-Qu-4tx" id="Y55-GZ-NMw"/>
+                        <outlet property="topRightButton" destination="kqg-wJ-XL2" id="3g0-PV-eXG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5GB-gU-owr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvh-6S-Tkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="1671.8140929535234"/>
+            <point key="canvasLocation" x="2476" y="1614"/>
         </scene>
         <!--Tools View Controller-->
         <scene sceneID="JPi-Ui-i8F">
@@ -429,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBe-5x-pwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2202.898550724638" y="891.84782608695662"/>
+            <point key="canvasLocation" x="2527" y="890"/>
         </scene>
     </scenes>
 </document>
