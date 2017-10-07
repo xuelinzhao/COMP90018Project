@@ -29,6 +29,17 @@
 		18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 		18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
 		2A0477A7A0FDD7BCB4737802 /* Pods-COMP90018Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COMP90018Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project.release.xcconfig"; sourceTree = "<group>"; };
+		57132EFB1F88E16B00CC9785 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		57B08FCB1F876C800085243E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		57B08FCD1F8780A00085243E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57B08FCF1F8780B80085243E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		57B08FD11F8789850085243E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		57C4A72A1F86696F00FF6587 /* ConfirmPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPassword.swift; sourceTree = "<group>"; };
+		57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmStopViewController.swift; sourceTree = "<group>"; };
+		57EA920B1F8347430080AF5F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		57EA920D1F834C880080AF5F /* EmergencyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessage.swift; sourceTree = "<group>"; };
+		57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmergencyMessageViewController.swift; sourceTree = "<group>"; };
 		81AFD601B91E54F3C430FBF8 /* Pods-COMP90018Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COMP90018Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project.debug.xcconfig"; sourceTree = "<group>"; };
 		944A07267EB1F8D96EDEE3AC /* Pods_COMP90018Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COMP90018Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C35A4B31DE4EF8000650581 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EA920C1F8347430080AF5F /* CoreLocation.framework in Frameworks */,
 				9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */,
 				9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */,
 				9CA121761DAC7FFD000C2FCA /* WebKit.framework in Frameworks */,
@@ -63,6 +75,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57EA920F1F834C9D0080AF5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57EA920D1F834C880080AF5F /* EmergencyMessage.swift */,
+				57C4A72A1F86696F00FF6587 /* ConfirmPassword.swift */,
+				57B08FD11F8789850085243E /* User.swift */,
+				57132EFB1F88E16B00CC9785 /* Global.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		57EA92101F834CBB0080AF5F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */,
+				57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */,
+				57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */,
+				57B08FCB1F876C800085243E /* MainViewController.swift */,
+				57B08FCD1F8780A00085243E /* LoginViewController.swift */,
+				57B08FCF1F8780B80085243E /* RegisterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5AD0F8D5841698D82878535F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +111,7 @@
 		9CA121741DAC7FFD000C2FCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57EA920B1F8347430080AF5F /* CoreLocation.framework */,
 				9C35A4B51DE4EF8500650581 /* Security.framework */,
 				9C35A4B31DE4EF8000650581 /* SafariServices.framework */,
 				9CA121751DAC7FFD000C2FCA /* WebKit.framework */,
@@ -104,16 +141,18 @@
 		A2D9CBC01943C2540017F096 /* COMP90018Project */ = {
 			isa = PBXGroup;
 			children = (
+				57EA92101F834CBB0080AF5F /* Controllers */,
+				57EA920F1F834C9D0080AF5F /* Models */,
 				A2BD20951AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld */,
 				A2D9CBC31943C2540017F096 /* AppDelegate.swift */,
 				A2D9CBCA1943C2540017F096 /* Main.storyboard */,
 				18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */,
 				18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */,
 				A2D9CBCD1943C2540017F096 /* Images.xcassets */,
-				A2D9CBC11943C2540017F096 /* Supporting Files */,
 				A2D9CBE31943C39D0017F096 /* ToDoTableViewController.swift */,
 				18A08EBF1F84956200C2AC6A /* MainViewController.swift */,
 				A2E767C5194594DC00869113 /* ToDoItemViewController.swift */,
+				A2D9CBC11943C2540017F096 /* Supporting Files */,
 				A2D9CBE51943CB520017F096 /* frameworks */,
 				A2D9CBE81943D1340017F096 /* COMP90018Project-Bridging-Header.h */,
 				A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */,
@@ -235,9 +274,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -278,6 +320,9 @@
 				18A08EC41F84A0DE00C2AC6A /* SOSViewController.swift in Sources */,
 				18A08EC01F84956200C2AC6A /* MainViewController.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
+				57C4A72D1F86698700FF6587 /* ConfirmStopViewController.swift in Sources */,
+				57B08FCC1F876C800085243E /* MainViewController.swift in Sources */,
+				57B08FCE1F8780A00085243E /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
