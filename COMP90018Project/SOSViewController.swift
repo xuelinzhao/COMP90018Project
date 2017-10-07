@@ -32,4 +32,7 @@ class SOSViewController: UIViewController {
     }
     */
 
+    @IBAction func btnCancelPressed(_ sender: Any) {
+                self.dismiss(animated: true, completion:nil)
+    }
 }

@@ -40,4 +40,7 @@ class ToolsViewController: UIViewController {
     
     @IBAction func torchPressed(_ sender: Any) {
     }
+    @IBAction func btnCancelClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion:nil)
+    }
 }
