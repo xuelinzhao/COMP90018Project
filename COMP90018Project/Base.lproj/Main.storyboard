@@ -200,24 +200,23 @@
                                 <rect key="frame" x="20" y="108.5" width="335" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnS-5U-uFh" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="57" y="45.5" width="54" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="41.5" y="42" width="85" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title=" Button1">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" title="Button1">
-                                            <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="selected" title=" Button1">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="button1Pressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="7Xi-6z-PVX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA1-c3-4kp" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="219" y="45.5" width="65" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button2">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <rect key="frame" x="207.5" y="42" width="88" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title=" Button2"/>
                                         <state key="selected" title="Button2">
                                             <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -226,11 +225,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-RT-fYL" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="51.5" y="170.5" width="65" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button3">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <rect key="frame" x="39.5" y="167" width="89" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title=" Button3"/>
                                         <state key="selected" title="Button">
                                             <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -239,11 +236,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-98-SMd" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="219" y="170.5" width="65" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button4">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <rect key="frame" x="207" y="167" width="89" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title=" Button4"/>
                                         <state key="selected" title="Button4">
                                             <color key="titleColor" red="0.99936085939407349" green="0.14975595474243164" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -252,7 +247,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="xnS-5U-uFh" firstAttribute="centerY" secondItem="QYc-4i-gAc" secondAttribute="centerY" multiplier="0.5" id="BAk-4t-KjS"/>
                                     <constraint firstItem="k5u-98-SMd" firstAttribute="centerY" secondItem="QYc-4i-gAc" secondAttribute="centerY" multiplier="1.5" id="IJJ-hQ-lh9"/>
@@ -264,14 +258,6 @@
                                     <constraint firstItem="4r9-RT-fYL" firstAttribute="centerX" secondItem="xnS-5U-uFh" secondAttribute="centerX" id="uM5-K7-dlT"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gJ-Zn-1ep">
-                                <rect key="frame" x="40" y="401" width="183" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Monument"/>
-                                <state key="selected">
-                                    <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -446,7 +432,4 @@
             <point key="canvasLocation" x="2202.898550724638" y="891.84782608695662"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Monument" width="100" height="100"/>
-    </resources>
 </document>

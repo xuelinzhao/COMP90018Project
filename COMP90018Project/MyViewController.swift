@@ -46,26 +46,38 @@ class MyViewController: UIViewController {
         self.guardMeButton.setTitleColor(UIColor(white:1, alpha: 1), for: .normal)
         
         //        iconButton.parseIcon()
-        stateButton1.setIconImage(withIcon: .sunIcon, size: CGSize(width: 50, height: 40), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        stateButton1.setIconImage(withIcon: .sunIcon, size: CGSize(width: 50, height: 40), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        stateButton1.setIconImage(withIcon: .sunIcon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        stateButton1.setIconImage(withIcon: .sunIcon, size: CGSize(width: 60, height: 60), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        
+        stateButton1.setTitleColor(UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), for: .normal)
+        stateButton1.setTitleColor(UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), for: .selected)
         
         stateButton1.layer.cornerRadius = 10
         stateButton1.clipsToBounds = true
        
-        stateButton2.setIconImage(withIcon: ._279Icon, size: CGSize(width: 50, height: 40), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        stateButton2.setIconImage(withIcon: ._279Icon, size: CGSize(width: 50, height: 40), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        stateButton2.setIconImage(withIcon: ._279Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        stateButton2.setIconImage(withIcon: ._279Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        
+        stateButton2.setTitleColor(UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), for: .normal)
+        stateButton2.setTitleColor(UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), for: .selected)
         
         stateButton2.layer.cornerRadius = 10
         stateButton2.clipsToBounds = true
         
-        stateButton3.setIconImage(withIcon: ._283Icon, size: CGSize(width: 50, height: 40), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        stateButton3.setIconImage(withIcon: ._283Icon, size: CGSize(width: 50, height: 40), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        stateButton3.setIconImage(withIcon: ._283Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        stateButton3.setIconImage(withIcon: ._283Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        
+        stateButton3.setTitleColor(UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), for: .normal)
+        stateButton3.setTitleColor(UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), for: .selected)
         
         stateButton3.layer.cornerRadius = 10
         stateButton3.clipsToBounds = true
         
-        stateButton4.setIconImage(withIcon: ._303Icon, size: CGSize(width: 50, height: 40), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
-        stateButton4.setIconImage(withIcon: ._303Icon, size: CGSize(width: 50, height: 40), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        stateButton4.setIconImage(withIcon: ._303Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        stateButton4.setIconImage(withIcon: ._303Icon, size: CGSize(width: 60, height: 60), color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .selected)
+        
+        stateButton4.setTitleColor(UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), for: .normal)
+        stateButton4.setTitleColor(UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), for: .selected)
         
         stateButton4.layer.cornerRadius = 10
         stateButton4.clipsToBounds = true
