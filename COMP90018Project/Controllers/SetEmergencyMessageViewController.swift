@@ -28,7 +28,7 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     override func viewDidLoad() {
         print("Help!!!"+user.username+user.ememail+user.emmessage)
         super.viewDidLoad()
-        emessage.text = "I am "+user.username+". "+user.emmessage+". My location is "+address
+        emessage.text = "I am "+user.username+". "+user.emmessage
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -61,8 +61,8 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         em.longitude = longitudelabel.text!
         em.emergencyMessage = emessage.text!
         em.address = address
-        var emmsg = em.emergencyMessage + em.address
-          sendEmail(emmessage: emmsg, emcontact: user.ememail)
+        var emmsg:String = em.emergencyMessage+" My location is "+em.address
+        sendEmail(emmessage: emmsg, emcontact: user.ememail)
         em.saveItem()
         
     }
