@@ -632,37 +632,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91R-SO-hHp">
-                                <rect key="frame" x="148" y="271" width="211" height="30"/>
+                                <rect key="frame" x="148" y="267" width="211" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXb-51-iD7">
-                                <rect key="frame" x="41" y="274" width="99" height="24"/>
+                                <rect key="frame" x="41" y="270" width="99" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mRp-7s-Obk">
-                                <rect key="frame" x="148" y="317" width="211" height="30"/>
+                                <rect key="frame" x="148" y="313" width="211" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-bF-vak">
-                                <rect key="frame" x="41" y="320" width="99" height="24"/>
+                                <rect key="frame" x="41" y="316" width="99" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-bP-b6Z">
-                                <rect key="frame" x="148" y="369" width="211" height="30"/>
+                                <rect key="frame" x="148" y="365" width="211" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pR-O5-OXb">
-                                <rect key="frame" x="134.5" y="499" width="105.5" height="48"/>
+                                <rect key="frame" x="134.5" y="495" width="105.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
@@ -670,13 +670,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XzK-Es-s1E">
-                                <rect key="frame" x="148" y="228" width="211" height="30"/>
+                                <rect key="frame" x="148" y="224" width="211" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4u-ev-vyM">
-                                <rect key="frame" x="41" y="231" width="99" height="24"/>
+                                <rect key="frame" x="41" y="227" width="99" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="Vxs-WH-jhd"/>
                                 </constraints>
@@ -685,25 +685,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLw-pK-l9v">
-                                <rect key="frame" x="148" y="418" width="211" height="30"/>
+                                <rect key="frame" x="148" y="414" width="211" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uX-SN-SEC">
-                                <rect key="frame" x="41" y="421" width="99" height="24"/>
+                                <rect key="frame" x="41" y="417" width="99" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr3-9g-4TZ">
-                                <rect key="frame" x="134.5" y="138" width="106.5" height="36"/>
+                                <rect key="frame" x="134.5" y="134" width="106.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMm-eQ-pW6">
-                                <rect key="frame" x="41" y="368" width="99" height="31"/>
+                                <rect key="frame" x="41" y="364" width="99" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -872,7 +872,6 @@
                                 <state key="highlighted" title="You are being guarded."/>
                                 <connections>
                                     <action selector="btnGuardMePressed:" destination="KC3-TJ-qNy" eventType="touchUpInside" id="gv1-cO-pa9"/>
-                                    <segue destination="Q8D-tw-6zG" kind="push" identifier="tomap" id="Lyq-ob-Uki"/>
                                 </connections>
                             </button>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-uQ-IPZ">
@@ -938,10 +937,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBG-iV-tgG" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="39.5" y="167" width="89" height="41"/>
+                                        <rect key="frame" x="53.5" y="167" width="61" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Button3"/>
-                                        <state key="selected" title="Button">
+                                        <state key="normal" title="Travel"/>
+                                        <state key="selected">
                                             <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -949,10 +948,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lo-3x-2Wa" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="207" y="167" width="89" height="41"/>
+                                        <rect key="frame" x="225" y="167" width="54" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Button4"/>
-                                        <state key="selected" title="Button4">
+                                        <state key="normal" title="Drive"/>
+                                        <state key="selected">
                                             <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -995,11 +994,12 @@
                         <outlet property="stateButton3" destination="xBG-iV-tgG" id="OkR-hF-sai"/>
                         <outlet property="stateButton4" destination="4Lo-3x-2Wa" id="eaK-cR-6AT"/>
                         <outlet property="toolsButton" destination="lil-aX-qpI" id="2sI-sW-8hQ"/>
+                        <segue destination="Q8D-tw-6zG" kind="push" identifier="tomap" id="t5t-q4-pa2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEU-yd-pwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="1397"/>
+            <point key="canvasLocation" x="-54" y="1397"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ULq-3h-z8T">

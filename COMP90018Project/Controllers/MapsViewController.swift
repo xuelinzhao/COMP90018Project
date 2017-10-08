@@ -27,7 +27,6 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     var zoomLevel: Float = 20.0
     
     let em = EmergencyMessage()
-    
     var user = User()
     
     override func viewDidLoad() {
@@ -124,6 +123,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
                 //Address detail
                 var addressDetail: String = (FormattedAddressLines as String)+" "+(SubLocality as String)+" "+city+" "+State+" "+(country as String)+" "+(CountryCode as String)+" latitude: "+"\(currentLocation.coordinate.latitude)"+" longitude: "+"\(currentLocation.coordinate.longitude)"
                 print(addressDetail)
+                self.user.address = addressDetail
             }
             else
             {
@@ -140,7 +140,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     @IBOutlet weak var TimerLabel: UILabel!
     
     @IBAction func CountButton(_ sender: UIButton) {
-       
+        
         stopFlag = false
         //get left time
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(1), target: self, selector: #selector(tickDown), userInfo: nil, repeats: true)
@@ -156,19 +156,18 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     @IBAction func HelpButton(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "sendboard") as! SetEmergencyMessageViewController
         
-           vc.user = self.user
+        vc.user = self.user
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-    
     
     var stopFlag = false
     
     //Pop into password confirm view
     @IBAction func StopButton(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "confirmstop") as! ConfirmStopViewController
-           vc.delegate = self
-           vc.user = self.user
+        vc.delegate = self
+        vc.user = self.user
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -184,6 +183,9 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
             //delete timer
             timer.invalidate()
             TimerLabel.text = "Time up"
+            var emmsg = "I am "+user.username+". "+user.emmessage+" My location is "+user.address
+            sendEmail(emmessage: emmsg, emcontact: user.ememail)
+            
             let alter = UIAlertView()
             alter.title = "Time Up!"
             alter.message = "We have sent your emergency messages to your emergency contant!"
@@ -268,22 +270,17 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         self.present(alertController, animated: true, completion: nil)
     }
     
-    //1 Column, inherited from UIPickerViewDataSource
+    // 1 Column, inherited from UIPickerViewDataSource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    //5 rows, inherited from UIPickerViewDataSource
+    // 5 rows, inherited from UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 5
     }
     
-    //Set width of pickerview
-//    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-//        return view.bounds.width
-//    }
-    
-    //comtents，inherited from UIPickerViewDelegate
+    // inherited from UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int,
                     forComponent component: Int) -> String? {
         if(row == 0){
@@ -314,6 +311,40 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         return String(row)+"-"+String(component)
     }
     
+    func sendEmail(emmessage:String, emcontact:String){
+        // prepare json data
+        print(emmessage + emcontact)
+        let json: [String: Any] = ["message": emmessage,
+                                   "contact": emcontact
+        ]
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        // create post request
+        let url = URL(string: "http://comp90018project.azurewebsites.net/api/sendEmail")!
+        var request = URLRequest(url: url)
+        
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-type")
+        request.httpMethod = "POST"
+        
+        
+        // insert json data to the request
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
+        }
+        
+        task.resume()
+    }
     
 }
 
