@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r4c-FZ-6O4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r4c-FZ-6O4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,7 +33,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xtB-im-W7s">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1359.375" y="168.75"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Master View Controller-->
         <scene sceneID="dD5-JD-aoQ">
             <objects>
-                <viewController id="r4c-FZ-6O4" customClass="MainViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r4c-FZ-6O4" customClass="MasterViewController" customModule="COMP90018Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRC-Gc-LcY"/>
                         <viewControllerLayoutGuide type="bottom" id="TIq-Ry-yqL"/>
@@ -149,63 +149,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKD-TZ-rNd">
-                                <rect key="frame" x="94" y="518.5" width="187" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="75" y="518.5" width="225" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9bW-1S-t8W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                <state key="normal" title="    Guard Me    "/>
+                                <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
+                                <state key="normal" title="Guard Me">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <state key="selected" title="Guarded"/>
                                 <state key="highlighted" title="You are being guarded."/>
                                 <connections>
                                     <action selector="btnGuardMePressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="ql2-FB-gOe"/>
                                 </connections>
                             </button>
-                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOW-uE-jcu">
+                            <view autoresizesSubviews="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOW-uE-jcu">
                                 <rect key="frame" x="0.0" y="573.5" width="375" height="93.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-Zs-jCi">
-                                        <rect key="frame" x="43.5" y="20" width="124" height="54"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                        <size key="titleShadowOffset" width="4" height="4"/>
-                                        <state key="normal" title="SOS"/>
-                                        <connections>
-                                            <action selector="btnSOSPressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="A3Z-Fb-m6y"/>
-                                            <segue destination="gyy-td-6B4" kind="modal" modalTransitionStyle="crossDissolve" id="Oln-kf-AJx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-3q-fD0">
-                                        <rect key="frame" x="196.5" y="19.5" width="124" height="54"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                        <state key="normal" title="Tools"/>
-                                        <connections>
-                                            <segue destination="260-kc-Tzc" kind="presentation" modalTransitionStyle="crossDissolve" id="2fU-Vo-1Eg"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c7v-s2-jKH">
+                                        <rect key="frame" x="20" y="20" width="335" height="53.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-Zs-jCi">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="53.5"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                                <size key="titleShadowOffset" width="4" height="4"/>
+                                                <state key="normal" title="SOS"/>
+                                                <connections>
+                                                    <action selector="btnSOSPressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="A3Z-Fb-m6y"/>
+                                                    <segue destination="gyy-td-6B4" kind="modal" modalTransitionStyle="crossDissolve" id="Oln-kf-AJx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBE-3q-fD0">
+                                                <rect key="frame" x="177.5" y="0.0" width="157.5" height="53.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                                <state key="normal" title="Tools"/>
+                                                <connections>
+                                                    <segue destination="260-kc-Tzc" kind="presentation" modalTransitionStyle="crossDissolve" id="2fU-Vo-1Eg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="gBE-3q-fD0" firstAttribute="centerY" secondItem="6Px-Zs-jCi" secondAttribute="centerY" id="2AZ-QO-9ws"/>
-                                    <constraint firstItem="6Px-Zs-jCi" firstAttribute="height" secondItem="mOW-uE-jcu" secondAttribute="height" multiplier="8/14" id="Rw1-rN-fSq"/>
-                                    <constraint firstItem="gBE-3q-fD0" firstAttribute="width" secondItem="6Px-Zs-jCi" secondAttribute="width" id="U8f-jw-EBJ"/>
-                                    <constraint firstItem="6Px-Zs-jCi" firstAttribute="centerX" secondItem="mOW-uE-jcu" secondAttribute="centerX" multiplier="0.56" constant="0.40000000000000002" id="etZ-lM-w8E"/>
-                                    <constraint firstItem="6Px-Zs-jCi" firstAttribute="centerY" secondItem="mOW-uE-jcu" secondAttribute="centerY" id="jps-rX-joP"/>
-                                    <constraint firstItem="gBE-3q-fD0" firstAttribute="centerX" secondItem="mOW-uE-jcu" secondAttribute="centerX" multiplier="1.44" constant="-11.399999999999977" id="rTz-Wq-eZv"/>
-                                    <constraint firstItem="gBE-3q-fD0" firstAttribute="height" secondItem="6Px-Zs-jCi" secondAttribute="height" id="wfW-Wr-4PB"/>
-                                    <constraint firstItem="6Px-Zs-jCi" firstAttribute="width" secondItem="mOW-uE-jcu" secondAttribute="width" multiplier="0.33" id="zzl-Nl-5dl"/>
+                                    <constraint firstItem="c7v-s2-jKH" firstAttribute="top" secondItem="mOW-uE-jcu" secondAttribute="top" constant="20" id="Cuu-TL-Z9e"/>
+                                    <constraint firstAttribute="trailing" secondItem="c7v-s2-jKH" secondAttribute="trailing" constant="20" id="Oao-d2-ZKV"/>
+                                    <constraint firstItem="c7v-s2-jKH" firstAttribute="leading" secondItem="mOW-uE-jcu" secondAttribute="leading" constant="20" id="qag-Xq-nQ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="c7v-s2-jKH" secondAttribute="bottom" constant="20" id="tDo-Qg-Gbc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYc-4i-gAc">
                                 <rect key="frame" x="20" y="108.5" width="335" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnS-5U-uFh" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="24.5" y="42" width="119" height="41"/>
+                                        <rect key="frame" x="27.5" y="42" width="113" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Taking Taxi">
+                                        <state key="normal" title="Taking Taxi">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="selected" title=" Button1">
@@ -216,18 +220,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA1-c3-4kp" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="183.5" y="42" width="136" height="41"/>
+                                        <rect key="frame" x="186.5" y="42" width="130" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Going Home"/>
+                                        <state key="normal" title="Going Home"/>
                                         <state key="selected" title="Button2"/>
                                         <connections>
                                             <action selector="button2Pressed:" destination="r4c-FZ-6O4" eventType="touchUpInside" id="UNp-cR-4Jl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-RT-fYL" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="39.5" y="167" width="89" height="41"/>
+                                        <rect key="frame" x="42" y="167" width="84" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Button3"/>
+                                        <state key="normal" title="Button3"/>
                                         <state key="selected" title="Button">
                                             <color key="titleColor" red="0.99936085939999997" green="0.1497559547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -236,9 +240,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-98-SMd" customClass="SwiftIconButton" customModule="SwiftIconFont">
-                                        <rect key="frame" x="207" y="167" width="89" height="41"/>
+                                        <rect key="frame" x="209.5" y="167" width="84" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title=" Button4"/>
+                                        <state key="normal" title="Button4"/>
                                         <state key="selected" title="Button4">
                                             <color key="titleColor" red="0.99936085939407349" green="0.14975595474243164" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
