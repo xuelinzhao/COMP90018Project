@@ -18,15 +18,11 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     //Location
     var locationManager = CLLocationManager()
     let em = EmergencyMessage()
-   
     var address = "Location"
     
     var user = User()
     
-    //Timer
-    
     override func viewDidLoad() {
-        print("Help!!!"+user.username+user.ememail+user.emmessage)
         super.viewDidLoad()
         emessage.text = "I am "+user.username+". "+user.emmessage
         locationManager = CLLocationManager()
@@ -36,7 +32,6 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         print("Start Loaction")
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,18 +40,16 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation : CLLocation = locations.last!
-     
         latitudelabel.text = "\(currentLocation.coordinate.latitude)"
         longitudelabel.text = "\(currentLocation.coordinate.longitude)"
         LonLatToCity(currentLocation: currentLocation)
     }
     
-    
+    // Save and send emergency message to emergency contact
     @IBAction func Save(_ sender: UIButton) {
         print(latitudelabel.text!)
         print(longitudelabel.text!)
         
-      
         em.latitude = latitudelabel.text!
         em.longitude = longitudelabel.text!
         em.emergencyMessage = emessage.text!
@@ -67,15 +60,13 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         
     }
     
-    
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
         print(error)
     }
     
-    //Get the address
+    //Get the address detail
     func LonLatToCity(currentLocation : CLLocation) -> Void {
         let geocoder: CLGeocoder = CLGeocoder()
-        
         geocoder.reverseGeocodeLocation(currentLocation) { (placemark, error) -> Void in
             if(error == nil)
             {
@@ -96,12 +87,11 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
                 //SubLocality
                 let SubLocality: NSString = (mark.addressDictionary! as NSDictionary).value(forKey: "SubLocality") as! NSString
                 
-                
                 //Address detail
                 var addressDetail: String = (FormattedAddressLines as String)+" "+(SubLocality as String)+" "+city+" "+State+" "+(country as String)+" "+(CountryCode as String)+" latitude: "+"\(currentLocation.coordinate.latitude)"+" longitude: "+"\(currentLocation.coordinate.longitude)"
                 self.address = addressDetail
                 print(addressDetail)
-        }
+            }
             else
             {
                 print(error!)
@@ -111,7 +101,7 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     
     func sendEmail(emmessage:String, emcontact:String){
         // prepare json data
-        print(emmessage+emcontact+"!!!!!!!!!!!!")
+        print(emmessage + emcontact)
         let json: [String: Any] = ["message": emmessage,
                                    "contact": emcontact
         ]
@@ -143,6 +133,6 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         
         task.resume()
     }
-    }
+}
 
 

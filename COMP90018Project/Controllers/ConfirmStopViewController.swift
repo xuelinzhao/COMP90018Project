@@ -11,6 +11,7 @@ protocol ParameterDelegate{
 
 import UIKit
 
+// Confirm StopPIN View Controller
 class ConfirmStopViewController: UIViewController  {
     
     

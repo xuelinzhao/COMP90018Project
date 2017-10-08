@@ -3,11 +3,12 @@
 //  COMP90018Project
 //
 //  Created by Xuelin Zhao on 2017/10/6.
-//  Copyright © 2017年 Microsoft. All rights reserved.
+//  Copyright © 2017 Microsoft. All rights reserved.
 //
 
 import UIKit
 
+// Login View Controller
 class LoginViewController: UIViewController {
     
     let CP = ConfirmPassword()
@@ -41,10 +42,6 @@ class LoginViewController: UIViewController {
     var exist = false
     
     @IBAction func LoginButton(_ sender: UIButton) {
-        //    CP.checkUserExisting(inputUsername: username.text!)
-        //    usernameExist = CP.checkUserExisting(inputUsername: username.text!)
-        //    passwordCorrect = CP.checkPassword(inputPassword: password.text!)
-        // Create a predicate that finds items where complete is false
         let sqlQuery = "username == "+"\'"+username.text!+"\'"
         print(sqlQuery)
         let predicate =  NSPredicate(format: sqlQuery)
@@ -54,17 +51,15 @@ class LoginViewController: UIViewController {
                 print("ERROR ", err)
             } else if let items = result?.items {
                 for item in items {
-                    print("item!!!!!!!!!!!!!")
                     if self.username.text! == item["username"] as! String{
                         if self.password.text! == item["password"] as! String {
                             self.user.username = self.username.text!
                             self.user.ememail = item["emergencyemail"] as! String
                             self.user.phone = item["phonenum"] as! String
-                            print("All Correct!!!!!!!")
-                            Global.init(inputuser: self.user)
-                           
-                      //segue to the main view
-                        self.performSegue(withIdentifier: "login", sender: self)
+                            print("All Correct!")
+                            
+                            //segue to the main view
+                            self.performSegue(withIdentifier: "login", sender: self)
                         }
                         else{
                             let alter = UIAlertView()
@@ -85,6 +80,7 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! MainViewController
         controller.user = self.user
@@ -92,14 +88,12 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
