@@ -10,6 +10,10 @@
 		18A08EC01F84956200C2AC6A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08EBF1F84956200C2AC6A /* MasterViewController.swift */; };
 		18A08EC21F8498A800C2AC6A /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */; };
 		18A08EC41F84A0DE00C2AC6A /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */; };
+		18B072E81F8A037F0034159B /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B072E71F8A037F0034159B /* ContactsTableViewCell.swift */; };
+		18B072EA1F8A07180034159B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B072E91F8A07180034159B /* Contact.swift */; };
+		18B072EC1F8A0AC40034159B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B072EB1F8A0AC40034159B /* ContactsTableViewController.swift */; };
+		18B072EE1F8A24110034159B /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B072ED1F8A24110034159B /* ContactViewController.swift */; };
 		9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B31DE4EF8000650581 /* SafariServices.framework */; };
 		9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B51DE4EF8500650581 /* Security.framework */; };
 		9CA121761DAC7FFD000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121751DAC7FFD000C2FCA /* WebKit.framework */; };
@@ -28,6 +32,10 @@
 		18A08EBF1F84956200C2AC6A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
 		18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
 		18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
+		18B072E71F8A037F0034159B /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		18B072E91F8A07180034159B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		18B072EB1F8A0AC40034159B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		18B072ED1F8A24110034159B /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		2A0477A7A0FDD7BCB4737802 /* Pods-COMP90018Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COMP90018Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project.release.xcconfig"; sourceTree = "<group>"; };
 		57132EFB1F88E16B00CC9785 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,10 @@
 				18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */,
 				18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */,
 				18A08EBF1F84956200C2AC6A /* MasterViewController.swift */,
+				18B072E91F8A07180034159B /* Contact.swift */,
+				18B072E71F8A037F0034159B /* ContactsTableViewCell.swift */,
+				18B072EB1F8A0AC40034159B /* ContactsTableViewController.swift */,
+				18B072ED1F8A24110034159B /* ContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -312,9 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B072E81F8A037F0034159B /* ContactsTableViewCell.swift in Sources */,
 				18A08EC21F8498A800C2AC6A /* ToolsViewController.swift in Sources */,
+				18B072EC1F8A0AC40034159B /* ContactsTableViewController.swift in Sources */,
+				18B072EA1F8A07180034159B /* Contact.swift in Sources */,
 				A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */,
 				A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */,
+				18B072EE1F8A24110034159B /* ContactViewController.swift in Sources */,
 				A2D9CBE41943C39D0017F096 /* ToDoTableViewController.swift in Sources */,
 				18A08EC41F84A0DE00C2AC6A /* SOSViewController.swift in Sources */,
 				18A08EC01F84956200C2AC6A /* MasterViewController.swift in Sources */,
@@ -455,7 +471,7 @@
 				INFOPLIST_FILE = COMP90018Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.COMP90018Project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShengcongGuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "COMP90018Project/COMP90018Project-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -478,7 +494,7 @@
 				INFOPLIST_FILE = COMP90018Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.COMP90018Project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ShengcongGuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "COMP90018Project/COMP90018Project-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;

@@ -10,7 +10,7 @@ import UIKit
 import Iconic
 //import SwiftIconFont
 
-class MasterViewController: UIViewController {
+class MasterViewController: UIViewController, UIImagePickerControllerDelegate {
     
 
     @IBOutlet weak var topLeftButton: UIButton!
@@ -141,6 +141,25 @@ class MasterViewController: UIViewController {
         // lead to contact table scene
     }
     
+    @IBAction func toolsPressed(_ sender: UIButton) {
+        showActionSheet()
+    }
+    
+    func showActionSheet() {
+        
+        let actionSheet = UIAlertController(title: "Tools", message: nil, preferredStyle: .actionSheet)
+        
+        //photo source - camera
+        actionSheet.addAction(UIAlertAction(title: "Pretending Call", style: .default, handler: nil))
+        
+        //photo source - photo library
+        actionSheet.addAction(UIAlertAction(title: "Flash Light", style: .default, handler: nil))
+        
+        //cancel button
+        actionSheet.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler:nil))
+        
+        present(actionSheet, animated: true, completion: nil)
+    }
     
     @IBAction func button1Pressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected;
