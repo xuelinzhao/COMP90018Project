@@ -24,10 +24,11 @@ class ConfirmStopViewController: UIViewController  {
     var delegate: ParameterDelegate?
     let em = EmergencyMessage()
     let cp = ConfirmPassword()
+    var user = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Stop!!!"+user.phone)
     }
     
     @IBAction func TouchDigit(_ sender: UIButton) {
@@ -56,7 +57,7 @@ class ConfirmStopViewController: UIViewController  {
   
     //Confirm stopPIN
     @IBAction func ConfirmPIN(_ sender: UIButton) {
-        stopFlag = cp.checkStopPIN(PIN: StopPIN)
+        stopFlag = cp.checkStopPIN(PIN: StopPIN, phone: user.phone)
         if stopFlag{
             print("StopPIN Correct!")
             self.delegate?.passParams(tmpStr: stopFlag)

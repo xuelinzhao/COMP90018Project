@@ -28,9 +28,10 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     
     let em = EmergencyMessage()
     
+    var user = User()
     
     override func viewDidLoad() {
-        
+        print("Maps!!!"+user.username+user.emmessage)
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -151,12 +152,23 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         return message
     }
     
+    
+    @IBAction func HelpButton(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "sendboard") as! SetEmergencyMessageViewController
+        
+           vc.user = self.user
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    
     var stopFlag = false
     
     //Pop into password confirm view
     @IBAction func StopButton(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "confirmstop") as! ConfirmStopViewController
-        vc.delegate = self
+           vc.delegate = self
+           vc.user = self.user
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -168,13 +180,22 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         let timeCount = getTimeCount(leftTimeCount: leftTime)
         TimerLabel.text = timeCount
         //if lefte time <= 0 or stop confirmed
-        if ((leftTime <= 0)||stopFlag) {
+        if leftTime <= 0 {
             //delete timer
             timer.invalidate()
             TimerLabel.text = "Time up"
             let alter = UIAlertView()
-            alter.title = "Time up"
-            alter.message = "Time up"
+            alter.title = "Time Up!"
+            alter.message = "We have sent your emergency messages to your emergency contant!"
+            alter.addButton(withTitle: "Confirm")
+            alter.show()
+        }
+        if stopFlag{
+            timer.invalidate()
+            TimerLabel.text = "Time"
+            let alter = UIAlertView()
+            alter.title = "Stop"
+            alter.message = "You have stopped guarding!"
             alter.addButton(withTitle: "Confirm")
             alter.show()
         }

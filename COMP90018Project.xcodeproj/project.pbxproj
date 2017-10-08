@@ -101,14 +101,14 @@
 		57EA92101F834CBB0080AF5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */,
-				57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */,
-				57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */,
-				57B08FCD1F8780A00085243E /* LoginViewController.swift */,
 				57B08FCF1F8780B80085243E /* RegisterViewController.swift */,
+				57B08FCD1F8780A00085243E /* LoginViewController.swift */,
+				57D5BC3D1F899A2C0000DC9A /* MainViewController.swift */,
+				576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */,
+				57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */,
+				57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */,
 				57D5BC391F899A230000DC9A /* SOSViewController.swift */,
 				57D5BC3A1F899A230000DC9A /* ToolsViewController.swift */,
-				57D5BC3D1F899A2C0000DC9A /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

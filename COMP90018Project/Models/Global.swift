@@ -13,4 +13,12 @@ class Global{
     init(inputuser:User) {
         user = inputuser
     }
+    
+    func getUser() -> User{
+        return self.user
+    }
+    
+    func setUser(userInput: User) {
+        self.user = userInput
+    }
 }

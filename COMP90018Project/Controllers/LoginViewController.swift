@@ -58,8 +58,11 @@ class LoginViewController: UIViewController {
                     if self.username.text! == item["username"] as! String{
                         if self.password.text! == item["password"] as! String {
                             self.user.username = self.username.text!
+                            self.user.ememail = item["emergencyemail"] as! String
+                            self.user.phone = item["phonenum"] as! String
                             print("All Correct!!!!!!!")
                             Global.init(inputuser: self.user)
+                           
                       //segue to the main view
                         self.performSegue(withIdentifier: "login", sender: self)
                         }
@@ -81,5 +84,23 @@ class LoginViewController: UIViewController {
                 alter.show()
             }
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! MainViewController
+        controller.user = self.user
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 }

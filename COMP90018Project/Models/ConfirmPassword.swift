@@ -24,8 +24,12 @@ class ConfirmPassword{
     }
    
     
-    func checkStopPIN(PIN:String)->Bool{
-        if PIN == "1111"{
+    func checkStopPIN(PIN:String, phone:String)->Bool{
+        let startIndex = phone.index(phone.startIndex, offsetBy: phone.lengthOfBytes(using: .utf8) - 4)
+        let endIndex = phone.index(startIndex, offsetBy:4)
+        let correctPIN = phone.substring(with: startIndex..<endIndex)
+        print("correctPIN"+correctPIN)
+        if PIN == correctPIN{
             return true
         }else{
             return false
