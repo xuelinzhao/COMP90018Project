@@ -207,7 +207,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
             
             let alter = UIAlertView()
             alter.title = "Time Up!"
-            alter.message = "We have sent your emergency messages to your emergency contant!"
+            alter.message = "We have sent your emergency messages to your emergency contact!"
             alter.addButton(withTitle: "Confirm")
             alter.show()
         }

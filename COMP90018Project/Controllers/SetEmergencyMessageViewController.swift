@@ -60,7 +60,7 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         
         let alter = UIAlertView()
         alter.title = "Sending"
-        alter.message = "We have sent your emergency messages to your emergency contant!"
+        alter.message = "We have sent your emergency messages to your emergency contact!"
         alter.addButton(withTitle: "Confirm")
         alter.show()
         self.navigationController?.popViewController(animated: true)
