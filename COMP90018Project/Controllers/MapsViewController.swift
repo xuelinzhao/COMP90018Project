@@ -59,7 +59,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
         print("Start Loaction")
         
         let camera = GMSCameraPosition.camera(withLatitude: 35.0,longitude: 35.0,zoom: zoomLevel)
-        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height*0.85), camera: camera)
+        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height*0.75), camera: camera)
         mapView.settings.myLocationButton = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
