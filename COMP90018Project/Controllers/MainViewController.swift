@@ -114,6 +114,9 @@ class MainViewController: UIViewController {
     
     @IBAction func btnSOSPressed(_ sender: UIButton) {
         // lead to contact table scene
+        // Dial
+        guard let number = URL(string: "tel://" + "000") else { return }
+        UIApplication.shared.open(number)
     }
     
     
@@ -139,7 +142,7 @@ class MainViewController: UIViewController {
         sender.isSelected = !sender.isSelected;
         // state 3
         if sender.isSelected{
-            self.user.emmessage = "I am Traveling! I need your help!"
+            self.user.emmessage = "I am "+user.username+"! I am Traveling! I need your help!"
         }
     }
     
@@ -148,9 +151,22 @@ class MainViewController: UIViewController {
         sender.isSelected = !sender.isSelected;
         // state 4
         if sender.isSelected{
-            self.user.emmessage = "I am Driving! I need your help!"
+            self.user.emmessage = "I am "+user.username+"! I am Driving! I need your help!"
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
 }
 
 

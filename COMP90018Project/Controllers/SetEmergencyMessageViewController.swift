@@ -58,6 +58,12 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         sendEmail(emmessage: emmsg, emcontact: user.ememail)
         em.saveItem()
         
+        let alter = UIAlertView()
+        alter.title = "Sending"
+        alter.message = "We have sent your emergency messages to your emergency contant!"
+        alter.addButton(withTitle: "Confirm")
+        alter.show()
+        self.navigationController?.popViewController(animated: true)
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
