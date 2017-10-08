@@ -1,7 +1,7 @@
 # COMP90018Project
-COMP90018 Project Security
+COMP90018 Project2 
 
-Download this project
+Download the project
 
 Open the file COMP90018Project.xcworkspace by Xcode 9.0
 
