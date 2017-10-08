@@ -15,12 +15,27 @@
 //
 import UIKit
 import GoogleMaps
+import Iconic
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
 
+    //  =============== added 5 Cct 2017 ==========
+    override init() {
+        super.init()
+        
+        // It is important to register the icon font as soon as possible,
+        // and make the resources available right after launching the app.
+        //
+        // This example uses Awesome Font
+        // http://fontawesome.io/cheatsheet/
+        
+        FontAwesomeIcon.register()
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
        GMSServices.provideAPIKey("AIzaSyCvHBeL1YQeuWLAaBBfCbsY1zO7l4V0pL0")

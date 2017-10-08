@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		57132EFC1F88E16B00CC9785 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132EFB1F88E16B00CC9785 /* Global.swift */; };
+		57645F771F89A3A30078127C /* Iconic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57645F781F89A3A30078127C /* Iconic.framework */; };
 		576C5DCB1F831B6B0056A8BB /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */; };
-		57B08FCC1F876C800085243E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FCB1F876C800085243E /* MainViewController.swift */; };
 		57B08FCE1F8780A00085243E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FCD1F8780A00085243E /* LoginViewController.swift */; };
 		57B08FD01F8780B80085243E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FCF1F8780B80085243E /* RegisterViewController.swift */; };
 		57B08FD21F8789850085243E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FD11F8789850085243E /* User.swift */; };
 		57C4A72B1F86696F00FF6587 /* ConfirmPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4A72A1F86696F00FF6587 /* ConfirmPassword.swift */; };
 		57C4A72D1F86698700FF6587 /* ConfirmStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */; };
+		57D5BC3B1F899A230000DC9A /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5BC391F899A230000DC9A /* SOSViewController.swift */; };
+		57D5BC3C1F899A230000DC9A /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5BC3A1F899A230000DC9A /* ToolsViewController.swift */; };
+		57D5BC3E1F899A2D0000DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D5BC3D1F899A2C0000DC9A /* MainViewController.swift */; };
 		57EA920C1F8347430080AF5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EA920B1F8347430080AF5F /* CoreLocation.framework */; };
 		57EA920E1F834C880080AF5F /* EmergencyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA920D1F834C880080AF5F /* EmergencyMessage.swift */; };
 		57EA92121F834D310080AF5F /* SetEmergencyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */; };
@@ -35,13 +38,16 @@
 /* Begin PBXFileReference section */
 		2A0477A7A0FDD7BCB4737802 /* Pods-COMP90018Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COMP90018Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project.release.xcconfig"; sourceTree = "<group>"; };
 		57132EFB1F88E16B00CC9785 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		57645F781F89A3A30078127C /* Iconic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Iconic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
-		57B08FCB1F876C800085243E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		57B08FCD1F8780A00085243E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		57B08FCF1F8780B80085243E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		57B08FD11F8789850085243E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57C4A72A1F86696F00FF6587 /* ConfirmPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPassword.swift; sourceTree = "<group>"; };
 		57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmStopViewController.swift; sourceTree = "<group>"; };
+		57D5BC391F899A230000DC9A /* SOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
+		57D5BC3A1F899A230000DC9A /* ToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
+		57D5BC3D1F899A2C0000DC9A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "../../../../Downloads/COMP90018Project-shengcongguo/COMP90018Project/MainViewController.swift"; sourceTree = "<group>"; };
 		57EA920B1F8347430080AF5F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		57EA920D1F834C880080AF5F /* EmergencyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMessage.swift; sourceTree = "<group>"; };
 		57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetEmergencyMessageViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57645F771F89A3A30078127C /* Iconic.framework in Frameworks */,
 				57EA920C1F8347430080AF5F /* CoreLocation.framework in Frameworks */,
 				9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */,
 				9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */,
@@ -94,12 +101,14 @@
 		57EA92101F834CBB0080AF5F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */,
-				57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */,
-				57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */,
-				57B08FCB1F876C800085243E /* MainViewController.swift */,
-				57B08FCD1F8780A00085243E /* LoginViewController.swift */,
 				57B08FCF1F8780B80085243E /* RegisterViewController.swift */,
+				57B08FCD1F8780A00085243E /* LoginViewController.swift */,
+				57D5BC3D1F899A2C0000DC9A /* MainViewController.swift */,
+				576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */,
+				57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */,
+				57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */,
+				57D5BC391F899A230000DC9A /* SOSViewController.swift */,
+				57D5BC3A1F899A230000DC9A /* ToolsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 		9CA121741DAC7FFD000C2FCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57645F781F89A3A30078127C /* Iconic.framework */,
 				57EA920B1F8347430080AF5F /* CoreLocation.framework */,
 				9C35A4B51DE4EF8500650581 /* Security.framework */,
 				9C35A4B31DE4EF8000650581 /* SafariServices.framework */,
@@ -294,9 +304,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Iconic/Iconic.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Iconic.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -314,15 +327,17 @@
 				57EA92121F834D310080AF5F /* SetEmergencyMessageViewController.swift in Sources */,
 				57C4A72B1F86696F00FF6587 /* ConfirmPassword.swift in Sources */,
 				576C5DCB1F831B6B0056A8BB /* MapsViewController.swift in Sources */,
+				57D5BC3C1F899A230000DC9A /* ToolsViewController.swift in Sources */,
 				57B08FD01F8780B80085243E /* RegisterViewController.swift in Sources */,
 				57EA920E1F834C880080AF5F /* EmergencyMessage.swift in Sources */,
+				57D5BC3E1F899A2D0000DC9A /* MainViewController.swift in Sources */,
+				57D5BC3B1F899A230000DC9A /* SOSViewController.swift in Sources */,
 				57132EFC1F88E16B00CC9785 /* Global.swift in Sources */,
 				A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */,
 				A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */,
 				A2D9CBE41943C39D0017F096 /* ToDoTableViewController.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
 				57C4A72D1F86698700FF6587 /* ConfirmStopViewController.swift in Sources */,
-				57B08FCC1F876C800085243E /* MainViewController.swift in Sources */,
 				57B08FCE1F8780A00085243E /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

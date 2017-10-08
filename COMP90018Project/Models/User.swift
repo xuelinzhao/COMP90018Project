@@ -15,6 +15,7 @@ class User{
     var email = "email"
     var emphone = "emergency phone"
     var ememail = "emergency email"
+    var emmessage = "I need your help!!!"
     
     func saveUser(){
         let client = MSClient(applicationURLString: "https://comp90018project.azurewebsites.net")

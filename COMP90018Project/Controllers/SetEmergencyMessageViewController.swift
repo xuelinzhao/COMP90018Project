@@ -19,12 +19,16 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     var locationManager = CLLocationManager()
     let em = EmergencyMessage()
    
-    var address = "This is the address"
+    var address = "Location"
+    
+    var user = User()
     
     //Timer
     
     override func viewDidLoad() {
+        print("Help!!!"+user.username+user.ememail+user.emmessage)
         super.viewDidLoad()
+        emessage.text = "I am "+user.username+". "+user.emmessage
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -51,11 +55,16 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
     @IBAction func Save(_ sender: UIButton) {
         print(latitudelabel.text!)
         print(longitudelabel.text!)
+        
+      
         em.latitude = latitudelabel.text!
         em.longitude = longitudelabel.text!
         em.emergencyMessage = emessage.text!
         em.address = address
+        var emmsg:String = em.emergencyMessage+" My location is "+em.address
+        sendEmail(emmessage: emmsg, emcontact: user.ememail)
         em.saveItem()
+        
     }
     
     
@@ -92,15 +101,48 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
                 var addressDetail: String = (FormattedAddressLines as String)+" "+(SubLocality as String)+" "+city+" "+State+" "+(country as String)+" "+(CountryCode as String)+" latitude: "+"\(currentLocation.coordinate.latitude)"+" longitude: "+"\(currentLocation.coordinate.longitude)"
                 self.address = addressDetail
                 print(addressDetail)
-                
-                
         }
             else
             {
                 print(error!)
             }
         }
-        
     }
-}
+    
+    func sendEmail(emmessage:String, emcontact:String){
+        // prepare json data
+        print(emmessage+emcontact+"!!!!!!!!!!!!")
+        let json: [String: Any] = ["message": emmessage,
+                                   "contact": emcontact
+        ]
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        // create post request
+        let url = URL(string: "http://comp90018project.azurewebsites.net/api/sendEmail")!
+        var request = URLRequest(url: url)
+        
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-type")
+        request.httpMethod = "POST"
+        
+        
+        // insert json data to the request
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
+        }
+        
+        task.resume()
+    }
+    }
+
 
