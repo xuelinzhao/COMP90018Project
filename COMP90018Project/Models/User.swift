@@ -3,11 +3,12 @@
 //  COMP90018Project
 //
 //  Created by Xuelin Zhao on 2017/10/6.
-//  Copyright © 2017年 Microsoft. All rights reserved.
+//  Copyright © 2017 Microsoft. All rights reserved.
 //
 
 import Foundation
 
+// Model of User
 class User{
     var username = "username"
     var password = "password"
@@ -26,7 +27,7 @@ class User{
         
         itemTable.insert(itemToInsert) {
             (item, error) in
-    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if error != nil {
                 print("Error: " + (error! as NSError).description)
             }

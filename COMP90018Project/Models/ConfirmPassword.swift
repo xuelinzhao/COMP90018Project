@@ -3,11 +3,12 @@
 //  COMP90018Project
 //
 //  Created by Xuelin Zhao on 2017/10/6.
-//  Copyright © 2017年 Microsoft. All rights reserved.
+//  Copyright © 2017 Microsoft. All rights reserved.
 //
 
 import Foundation
 
+// Models of confirm password and stopPIN
 class ConfirmPassword{
     var user: String = "username"
     var password: String = "password"
@@ -22,7 +23,7 @@ class ConfirmPassword{
         client = MSClient(applicationURLString: "https://comp90018project.azurewebsites.net")
         table = client.table(withName: "user")
     }
-   
+    
     
     func checkStopPIN(PIN:String, phone:String)->Bool{
         let startIndex = phone.index(phone.startIndex, offsetBy: phone.lengthOfBytes(using: .utf8) - 4)
@@ -34,7 +35,7 @@ class ConfirmPassword{
         }else{
             return false
         }
-        }
+    }
     
     func getResults(){
         table.read { (result, error) in
@@ -53,8 +54,8 @@ class ConfirmPassword{
     var exist = false
     
     func checkPassword(inputPassword: String) -> Bool{
-            if inputPassword == getPassword{
-        return true
+        if inputPassword == getPassword{
+            return true
         }else{
             return false
         }
@@ -83,12 +84,12 @@ class ConfirmPassword{
                     self.getUsername = item["username"] as! String
                     self.getPassword = item["password"] as! String
                     print("Username!!!!: ", item["username"]!)
-                     print("Password!!!!: ", item["password"]!)
+                    print("Password!!!!: ", item["password"]!)
                 }
             }
         }
-       
-       return exist
+        
+        return exist
     }
-   
+    
 }

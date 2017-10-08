@@ -3,20 +3,20 @@
 //  COMP90018Project
 //
 //  Created by Xuelin Zhao on 2017/10/3.
-//  Copyright © 2017年 Microsoft. All rights reserved.
+//  Copyright © 2017 Microsoft. All rights reserved.
 //
 
 import UIKit
 import GoogleMaps
 
+// Maps View Controller
 class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerViewDelegate, UIPickerViewDataSource, ParameterDelegate{
     
+    // Pass parameter between this controller and confirmStopPIN View Controller
     func passParams(tmpStr: Bool){
         stopFlag = tmpStr
         print(stopFlag)
     }
-    
-    // You don't need to modify the default init(nibName:bundle:) method.
     
     var latitude: Double = 0.0
     var longitude: Double = 0.0

@@ -42,9 +42,9 @@
 		4E4EAED386F4165D1FDBED1A6094B931 /* IconDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IconDrawable.swift; path = Source/IconDrawable.swift; sourceTree = "<group>"; };
 		4FE8771A1D1D3A9271A446A86DBF433D /* Pods-COMP90018Project-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-COMP90018Project-frameworks.sh"; sourceTree = "<group>"; };
 		501C4078DF1BC46BF13931CD5A5074EB /* Iconic.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Iconic.xcconfig; sourceTree = "<group>"; };
-		50753E4FDEADF5945F373CA41E56EF5D /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.otf; path = Source/Catalog/FontAwesome.otf; sourceTree = "<group>"; };
-		5ACD79794B385397395490FC4B61303E /* Pods-COMP90018Project.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-COMP90018Project.modulemap"; sourceTree = "<group>"; };
-		5C169DED1C52C9666AE4A6E48731E175 /* Iconic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Iconic.framework; path = Iconic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50753E4FDEADF5945F373CA41E56EF5D /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = Source/Catalog/FontAwesome.otf; sourceTree = "<group>"; };
+		5ACD79794B385397395490FC4B61303E /* Pods-COMP90018Project.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-COMP90018Project.modulemap"; sourceTree = "<group>"; };
+		5C169DED1C52C9666AE4A6E48731E175 /* Iconic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iconic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		611A1FD7E6CF31ABE477683892FB9160 /* FontAwesomeIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesomeIcon.swift; path = Source/FontAwesomeIcon.swift; sourceTree = "<group>"; };
 		6C4DFD68B2DFDEEDD58A97F949FA70D5 /* Iconic-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Iconic-dummy.m"; sourceTree = "<group>"; };
 		7C0AE95832AC6DFD981292ED7AD7837C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,15 +53,15 @@
 		811B9D5C18DFC5EA5DCD767D3E269AF0 /* IconImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IconImageView.swift; path = Source/IconImageView.swift; sourceTree = "<group>"; };
 		85C668CECE065E93FEE98B22A3EC2021 /* Iconic-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Iconic-umbrella.h"; sourceTree = "<group>"; };
 		880790B0993A4561C8CFD9487FB299AD /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DFD9CAC7C0016844AABD1A25CE6BB66 /* Pods-COMP90018Project-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-COMP90018Project-dummy.m"; sourceTree = "<group>"; };
 		A6B611A798113D54FDB030158352E71B /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		A7AF639F48630A369AAB591B5B339CC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B6E91D9C645AC0E7E28E820FBB4F9FAD /* Pods_COMP90018Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_COMP90018Project.framework; path = "Pods-COMP90018Project.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E91D9C645AC0E7E28E820FBB4F9FAD /* Pods_COMP90018Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COMP90018Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55C580E1FC5B6E9F442FE42A9553FEA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		D57D02AFE08102ACC693C3520F4F3D66 /* Pods-COMP90018Project-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-COMP90018Project-umbrella.h"; sourceTree = "<group>"; };
 		DA0CB82DC6133C69359AE5AE550B6D8B /* Iconic-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Iconic-prefix.pch"; sourceTree = "<group>"; };
-		EF59A0EA61C5BC449F6D2281EA962FBC /* Iconic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Iconic.modulemap; sourceTree = "<group>"; };
+		EF59A0EA61C5BC449F6D2281EA962FBC /* Iconic.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Iconic.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,6 @@
 				65AB9D3EB8C09350A4F89A3833D1C6A4 /* Resources */,
 				2DDFFBD4A3CAAFEF3924AC1FE1E83F03 /* Support Files */,
 			);
-			name = Iconic;
 			path = Iconic;
 			sourceTree = "<group>";
 		};
@@ -223,7 +222,6 @@
 				517DF39E0F829B7ED564F7496BF3498D /* Base */,
 				53840728D6D741FE5A499DAFB60F8639 /* Maps */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -312,6 +310,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					821476062CBD03F0FFD47E4A00E2B447 = {
+						LastSwiftMigration = 0830;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";

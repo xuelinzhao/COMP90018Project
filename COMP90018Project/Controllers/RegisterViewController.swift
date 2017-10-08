@@ -3,13 +3,14 @@
 //  COMP90018Project
 //
 //  Created by Xuelin Zhao on 2017/10/6.
-//  Copyright © 2017年 Microsoft. All rights reserved.
+//  Copyright © 2017 Microsoft. All rights reserved.
 //
 
 import UIKit
 
+// Register View Controller
 class RegisterViewController: UIViewController {
-
+    
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -33,9 +34,9 @@ class RegisterViewController: UIViewController {
     @IBAction func RegisterNextButton(_ sender: UIButton) {
         
         user1.username = self.username.text!
-
+        
         if(self.password.text == self.confirmpassword.text){
-        user1.password = self.password.text!
+            user1.password = self.password.text!
             stopFlag = true
         }else{
             stopFlag = false
@@ -49,8 +50,8 @@ class RegisterViewController: UIViewController {
         user1.phone = self.phone.text!
         let ec = self.storyboard?.instantiateViewController(withIdentifier: "ECVC") as! RegisterViewController
         if stopFlag {
-           ec.user = user1
-    self.navigationController?.pushViewController(ec, animated: true)
+            ec.user = user1
+            self.navigationController?.pushViewController(ec, animated: true)
         }
     }
     
@@ -60,13 +61,9 @@ class RegisterViewController: UIViewController {
         user.saveUser()
     }
     
-    
-    
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
