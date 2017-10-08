@@ -139,6 +139,10 @@ class SetEmergencyMessageViewController: UIViewController,CLLocationManagerDeleg
         
         task.resume()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
 

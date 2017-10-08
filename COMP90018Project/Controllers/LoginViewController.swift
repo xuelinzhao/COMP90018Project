@@ -82,8 +82,8 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! MainViewController
-        controller.user = self.user
+        let controller = segue.destination as? MainViewController
+        controller?.user = self.user
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,5 +96,9 @@ class LoginViewController: UIViewController {
         super.viewWillDisappear(animated)
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }

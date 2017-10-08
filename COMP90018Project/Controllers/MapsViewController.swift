@@ -12,6 +12,14 @@ import GoogleMaps
 // Maps View Controller
 class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerViewDelegate, UIPickerViewDataSource, ParameterDelegate{
     
+    @IBOutlet weak var StopBtn: UIButton!
+    
+    @IBOutlet weak var StartBtn: UIButton!
+    
+    @IBOutlet weak var HelpBtn: UIButton!
+    
+    @IBOutlet weak var SelectBtn: UIButton!
+    
     // Pass parameter between this controller and confirmStopPIN View Controller
     func passParams(tmpStr: Bool){
         stopFlag = tmpStr
@@ -30,6 +38,17 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     var user = User()
     
     override func viewDidLoad() {
+        HelpBtn.setBackgroundColor(color: UIColor(red: 1, green: 0.15, blue: 0, alpha: 1), forState: .normal)
+        HelpBtn.setBackgroundColor(color: UIColor(red: 1, green: 0.575, blue: 0.5, alpha: 1), forState: .highlighted)
+        
+        
+        StartBtn.layer.cornerRadius = 20
+        StartBtn.clipsToBounds = true
+        StartBtn.setBackgroundColor(color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        StartBtn.setBackgroundColor(color: UIColor(red: 0.5, green: 0.76, blue: 1, alpha: 1), forState: .highlighted)
+        StopBtn.setBackgroundColor(color: UIColor(red: 0, green: 0.478, blue: 1, alpha: 1), forState: .normal)
+        StopBtn.setBackgroundColor(color: UIColor(red: 0.5, green: 0.76, blue: 1, alpha: 1), forState: .highlighted)
+        
         print("Maps!!!"+user.username+user.emmessage)
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -134,7 +153,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     }
     
     //Timer Section
-    var leftTime:Int = 10
+    var leftTime:Int = 5
     var timer :Timer!
     
     @IBOutlet weak var TimerLabel: UILabel!
