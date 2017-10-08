@@ -6,7 +6,7 @@ target 'COMP90018Project' do
   use_frameworks!
   
   # Pods for COMP90018Project
-  pod 'GoogleMaps'
-  
-  
+  pod 'Iconic', '~> 1.3'
+  pod 'SwiftIconFont', '~> 2.7'
+
 end

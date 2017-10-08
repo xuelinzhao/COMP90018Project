@@ -7,17 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57132EFC1F88E16B00CC9785 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57132EFB1F88E16B00CC9785 /* Global.swift */; };
-		576C5DCB1F831B6B0056A8BB /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */; };
-		57B08FCC1F876C800085243E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FCB1F876C800085243E /* MainViewController.swift */; };
-		57B08FCE1F8780A00085243E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FCD1F8780A00085243E /* LoginViewController.swift */; };
-		57B08FD01F8780B80085243E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FCF1F8780B80085243E /* RegisterViewController.swift */; };
-		57B08FD21F8789850085243E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B08FD11F8789850085243E /* User.swift */; };
-		57C4A72B1F86696F00FF6587 /* ConfirmPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4A72A1F86696F00FF6587 /* ConfirmPassword.swift */; };
-		57C4A72D1F86698700FF6587 /* ConfirmStopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C4A72C1F86698700FF6587 /* ConfirmStopViewController.swift */; };
-		57EA920C1F8347430080AF5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EA920B1F8347430080AF5F /* CoreLocation.framework */; };
-		57EA920E1F834C880080AF5F /* EmergencyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA920D1F834C880080AF5F /* EmergencyMessage.swift */; };
-		57EA92121F834D310080AF5F /* SetEmergencyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA92111F834D310080AF5F /* SetEmergencyMessageViewController.swift */; };
+		18A08EC01F84956200C2AC6A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08EBF1F84956200C2AC6A /* MasterViewController.swift */; };
+		18A08EC21F8498A800C2AC6A /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */; };
+		18A08EC41F84A0DE00C2AC6A /* SOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */; };
 		9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B31DE4EF8000650581 /* SafariServices.framework */; };
 		9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B51DE4EF8500650581 /* Security.framework */; };
 		9CA121761DAC7FFD000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121751DAC7FFD000C2FCA /* WebKit.framework */; };
@@ -33,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A08EBF1F84956200C2AC6A /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
+		18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
+		18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewController.swift; sourceTree = "<group>"; };
 		2A0477A7A0FDD7BCB4737802 /* Pods-COMP90018Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COMP90018Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project.release.xcconfig"; sourceTree = "<group>"; };
 		57132EFB1F88E16B00CC9785 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		576C5DCA1F831B6B0056A8BB /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EA920C1F8347430080AF5F /* CoreLocation.framework in Frameworks */,
 				9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */,
 				9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */,
 				9CA121761DAC7FFD000C2FCA /* WebKit.framework in Frameworks */,
@@ -100,6 +94,9 @@
 				57B08FCB1F876C800085243E /* MainViewController.swift */,
 				57B08FCD1F8780A00085243E /* LoginViewController.swift */,
 				57B08FCF1F8780B80085243E /* RegisterViewController.swift */,
+				18A08EC31F84A0DE00C2AC6A /* SOSViewController.swift */,
+				18A08EC11F8498A800C2AC6A /* ToolsViewController.swift */,
+				18A08EBF1F84956200C2AC6A /* MasterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,7 +212,7 @@
 				TargetAttributes = {
 					A2D9CBBD1943C2540017F096 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = 8M6GM94BF8;
+						DevelopmentTeam = Q5WA85PJLU;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -294,9 +291,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-COMP90018Project/Pods-COMP90018Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Iconic/Iconic.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftIconFont/SwiftIconFont.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Iconic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIconFont.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,20 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B08FD21F8789850085243E /* User.swift in Sources */,
-				57EA92121F834D310080AF5F /* SetEmergencyMessageViewController.swift in Sources */,
-				57C4A72B1F86696F00FF6587 /* ConfirmPassword.swift in Sources */,
-				576C5DCB1F831B6B0056A8BB /* MapsViewController.swift in Sources */,
-				57B08FD01F8780B80085243E /* RegisterViewController.swift in Sources */,
-				57EA920E1F834C880080AF5F /* EmergencyMessage.swift in Sources */,
-				57132EFC1F88E16B00CC9785 /* Global.swift in Sources */,
+				18A08EC21F8498A800C2AC6A /* ToolsViewController.swift in Sources */,
 				A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */,
 				A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */,
 				A2D9CBE41943C39D0017F096 /* ToDoTableViewController.swift in Sources */,
+				18A08EC41F84A0DE00C2AC6A /* SOSViewController.swift in Sources */,
+				18A08EC01F84956200C2AC6A /* MasterViewController.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
-				57C4A72D1F86698700FF6587 /* ConfirmStopViewController.swift in Sources */,
-				57B08FCC1F876C800085243E /* MainViewController.swift in Sources */,
-				57B08FCE1F8780A00085243E /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8M6GM94BF8;
+				DEVELOPMENT_TEAM = Q5WA85PJLU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -460,7 +455,7 @@
 				INFOPLIST_FILE = COMP90018Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Microsoft.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.COMP90018Project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "COMP90018Project/COMP90018Project-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -475,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 8M6GM94BF8;
+				DEVELOPMENT_TEAM = Q5WA85PJLU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -483,7 +478,7 @@
 				INFOPLIST_FILE = COMP90018Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Microsoft.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.COMP90018Project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "COMP90018Project/COMP90018Project-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
