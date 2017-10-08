@@ -153,7 +153,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UIPickerVie
     }
     
     //Timer Section
-    var leftTime:Int = 10
+    var leftTime:Int = 5
     var timer :Timer!
     
     @IBOutlet weak var TimerLabel: UILabel!
