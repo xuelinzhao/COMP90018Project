@@ -82,8 +82,8 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! MainViewController
-        controller.user = self.user
+        let controller = segue.destination as? MainViewController
+        controller?.user = self.user
     }
     
     override func viewWillAppear(_ animated: Bool) {

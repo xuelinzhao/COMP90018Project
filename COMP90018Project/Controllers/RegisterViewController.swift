@@ -59,6 +59,12 @@ class RegisterViewController: UIViewController {
         user.ememail = self.ememail.text!
         user.emphone = self.emphone.text!
         user.saveUser()
+        let alter = UIAlertView()
+        alter.title = "Success!"
+        alter.message = "Register Successfully!"
+        alter.addButton(withTitle: "ok")
+        alter.show()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {
