@@ -1,4 +1,4 @@
-# COMP90018Project
+# Guard Me
 Guard Me
 
 Application introduction: https://youtu.be/wxW4OSmBB7g
