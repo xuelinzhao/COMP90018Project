@@ -1,6 +1,8 @@
 # COMP90018Project
 COMP90018 Project2 
 
+Application introduction: https://youtu.be/wxW4OSmBB7g
+
 Download the project
 
 Open the file COMP90018Project.xcworkspace by Xcode 9.0
